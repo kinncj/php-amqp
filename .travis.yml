@@ -24,8 +24,8 @@ before_script:
 
 script:
   - sh -c "make test | tee result.txt"
-  - sh test-report.sh
+  - sh -c "rabbitmqctl status | grep {rabbit"
 
 notifications:
   email:
-    - lstrojny@php.net
+    - kinncj@php.net
